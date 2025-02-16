@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import React from "react";
-import {Button} from "../../components/ui/button";
 
 export default function Home() {
     const [formData, setFormData] = useState({ name: "", email: "", needs: "" });
@@ -19,7 +18,6 @@ export default function Home() {
             <header className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-gray-900">Power Platform Solutions</h1>
                 <p className="text-lg text-gray-600 mt-2">Automate, Optimize, and Innovate with Our Expertise</p>
-                <Button className="mt-4">Get a Free Consultation</Button>
             </header>
 
             <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -67,14 +65,12 @@ export default function Home() {
                     <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-2 border rounded mb-4" required />
                     <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full p-2 border rounded mb-4" required />
                     <textarea name="needs" placeholder="Tell us about your needs..." value={formData.needs} onChange={handleChange} className="w-full p-2 border rounded mb-4" required></textarea>
-                    <Button type="submit">Submit</Button>
                 </form>
             </section>
 
             <section className="text-center mt-12">
                 <h2 className="text-2xl font-bold text-gray-900">Contact Us</h2>
                 <p className="text-gray-600 mt-2">Get in touch to discuss your automation needs.</p>
-                <Button className="mt-4">Contact Now</Button>
             </section>
         </div>
     );
